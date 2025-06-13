@@ -1,3 +1,4 @@
 import 'package:flutter/cupertino.dart';
 
-const KPrimaryColor = Color(0xFF62FCD7); 
+const kPrimaryColor = Color(0xFF62FCD7); 
+const kNotesBox = 'notes box';
