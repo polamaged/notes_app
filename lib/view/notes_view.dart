@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notesapp/constant.dart';
 import 'package:notesapp/view/widgets/add_note_buttom_sheet.dart';
 import 'package:notesapp/view/widgets/notes_view_body.dart';
 
@@ -17,7 +18,7 @@ class Homeview extends StatelessWidget {
           return const AddNoteButtomSheet();
         },);
       },
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: kPrimaryColor,
       child: Icon(Icons.add , color: Colors.black,),
       ),
       body: const notesviewbody(),
