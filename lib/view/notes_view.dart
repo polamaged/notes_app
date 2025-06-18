@@ -11,7 +11,11 @@ class Homeview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => NotesCubitCubit(),
+      create: (context) {
+        final cubit = NotesCubitCubit();
+        cubit.fetchallnotes();
+        return cubit;
+      },
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {
