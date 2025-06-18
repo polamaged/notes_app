@@ -10,31 +10,24 @@ class Homeview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) {
-        final cubit = NotesCubitCubit();
-        cubit.fetchallnotes();
-        return cubit;
-      },
-      child: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            showModalBottomSheet(
-              isScrollControlled: true,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-              ),
-              context: context,
-              builder: (context) {
-                return const AddNoteButtomSheet();
-              },
-            );
-          },
-          backgroundColor: kPrimaryColor,
-          child: Icon(Icons.add, color: Colors.black),
-        ),
-        body: const notesviewbody(),
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showModalBottomSheet(
+            isScrollControlled: true,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            context: context,
+            builder: (context) {
+              return const AddNoteButtomSheet();
+            },
+          );
+        },
+        backgroundColor: kPrimaryColor,
+        child: Icon(Icons.add, color: Colors.black),
       ),
+      body: const notesviewbody(),
     );
   }
 }

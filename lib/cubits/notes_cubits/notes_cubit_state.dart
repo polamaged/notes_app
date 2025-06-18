@@ -5,12 +5,7 @@ abstract class NotesCubitState {}
 
 class NotesCubitInitial extends NotesCubitState {}
 class NotesCubitLoading extends NotesCubitState {}
-class NotesCubitsuccess extends NotesCubitState {
-final List<NoteModel> notes; 
-
-  NotesCubitsuccess(this.notes);
-
-}
+class NotesCubitsuccess extends NotesCubitState {}
 class NotesCubitfailure extends NotesCubitState {
   
   final String errmessage;
